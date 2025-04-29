@@ -1,0 +1,135 @@
+/* Ensure the header and overlay cover the full viewport */
+.page-header {
+    position: relative;
+    height: 100vh; /* Make sure the header takes full screen height */
+    background-image: url('images/Background.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay for the background, but ensure it doesn’t block interaction */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Slightly transparent black */
+    z-index: 1; /* Make sure it stays above the background but below text */
+}
+
+/* Ensure text and button appear above the overlay */
+.container {
+    position: relative;
+    z-index: 2; /* Bring text and button above the overlay */
+}
+
+/* Page title and text positioning */
+.description {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3; /* Ensure text is above everything */
+}
+
+.description h1 {
+    color: #6ab446;
+}
+
+.description p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.description button {
+    border: 1px solid #6ab446;
+    background: #6ab446;
+    border-radius: 0;
+    color: #fff;
+}
+
+.description button:hover {
+    border: 1px solid #fff;
+    background: #fff;
+    color: #000;
+}
+.features {
+    margin: 4em auto;
+    padding: 1em;
+    position: relative;
+}
+
+.feature-title {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.features img {
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 16px;
+}
+
+.features .form-control,
+.features input {
+    border-radius: 0;
+}
+
+.features .btn {
+    background-color: #589b37;
+    border: 1px solid #589b37;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.features .btn:hover {
+    background-color: #333;
+    border: 1px solid #333;
+}
+.features .feature-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.features img {
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.features .form-control {
+  border-radius: 0;
+  margin-bottom: 1rem;
+}
+
+.features .btn {
+  background-color: #589b37;
+  color: #fff;
+  border: none;
+}
+
+.features .btn:hover {
+  background-color: #333;
+}
+
+/* Keep navbar green */
+.navbar {
+    background-color: #6ab446; /* Leafy green */
+}
+
+/* Soft background for the content area */
+.features-section {
+    background-color: #f2f6e9; /* Soft background color */
+    padding: 4em 0;
+}
